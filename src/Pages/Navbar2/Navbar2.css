@@ -1,0 +1,25 @@
+.navbar2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    top: 10%; 
+    background-color: rgb(67, 65, 65);
+    border-radius: 10px;
+}
+
+.nav2left{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav2ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+    color: white;
+}

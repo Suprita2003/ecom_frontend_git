@@ -1,0 +1,66 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+}
+
+.cartheadings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 40px;
+}
+
+.cartItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cartitems-down{
+    display: flex;
+    margin: 100px 0px;
+}
+
+.cartitems-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+}
+
+.cartitems-total-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems-total button{
+    width: 260px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+
+
+
