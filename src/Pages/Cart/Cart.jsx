@@ -86,7 +86,7 @@ export default function Cart({ product }) {
         <p>Price</p>
         <p>Quantity</p>
         <p>Total</p>
-        <p>Remove</p>
+        <p>Remove..</p>
       </div>
       <hr style={{ width: "100%" }} />
 
