@@ -7,7 +7,7 @@ export default function Cart({ product }) {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const response = await fetch("http://localhost:5000/product/getcart/6788bd4658d6319f74d4ff5c/677faab42ae0ccd71481090e");
+        const response = await fetch("http://localhost:5000/product/getcart/6789dfe0279e8e32bbd35ce6/677faab42ae0ccd71481090e");
         if (!response.ok) {
           throw new Error("Failed to fetch cart data");
         }
