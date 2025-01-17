@@ -11,6 +11,8 @@ export default function Cart({ product }) {
         if (!response.ok) {
           throw new Error("Failed to fetch cart data");
         }
+
+        
         const data = await response.json();
         setCart(data.cart);
       } catch (error) {
