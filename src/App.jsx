@@ -4,6 +4,7 @@ import Home from './Main/Home/Home'
 import Dashboard from './Dashboard'
 import Cart from './Pages/Cart/Cart'
 import Navbar from './Main/Navbar/Navbar'
+import Orders from './Pages/Orders/Orders'
 
 function App() {
 
@@ -11,9 +12,10 @@ function App() {
     <BrowserRouter>
     <Navbar/>
       <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/home' element={<Home/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/order' element={<Orders/>}/>
       </Routes>
     </BrowserRouter>
   )

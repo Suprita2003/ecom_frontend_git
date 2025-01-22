@@ -11,22 +11,29 @@
 .navleft{
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
+.navhome{
+    text-decoration: none;
+    border: none;
+}
 .navleft h1{
-    font-size: 15px;
+    font-size: 20px;
     color: black;
 }
 .navright{
     display: flex;
     align-items: center;
-    font-size: 15px;   
+    font-size: 15px; 
+    gap: 20px;  
 }
-.cart{
-    margin-right: 20px;
+.carticon{
+    margin-right: 40px;
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
+
 }
 .user{
     margin-right: 20px;
@@ -34,7 +41,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 
 
 /* SEARCHBAR */
@@ -52,3 +58,18 @@
     border-radius: 4px;
     margin-bottom: 10px;
   }
+
+
+  .navcartcount{
+    position: absolute;
+    top: 5px;
+    right: 110px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
+    min-width: 20px;
+}

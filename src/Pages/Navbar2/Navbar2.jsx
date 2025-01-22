@@ -14,8 +14,8 @@ export default function Navbar2() {
     <div className='nav2left'>
      <ul className='nav2ul'>
         <li>All</li>
-        <li>Men</li>
-        <li>Women</li>
+        {/* <li>Men</li>
+        <li>Women</li> */}
     </ul>   
     </div> 
 
