@@ -28,6 +28,7 @@ export default function Cart() {
     if (newQuantity < 1) {
       console.error("Quantity cannot be less than 1");
       return;
+      
     }
   
     try {
