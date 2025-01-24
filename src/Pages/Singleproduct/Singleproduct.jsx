@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./SingleProduct.css";
+import star from '../../assets/star.png';
+import stardull from '../../assets/starDull.png';
 
 export default function SingleProduct() {
   const { productId } = useParams(); 
@@ -59,29 +61,34 @@ export default function SingleProduct() {
       <div className="single-product-deta">
         <h2>{product.name.toUpperCase()}</h2>
         <h3>₹ {product.price}</h3>
+        <div className='productdisplay-right-star'>
+          <img src={star} alt='' />
+          <img src={star} alt='' />
+          <img src={star} alt='' />
+          <img src={star} alt='' />
+          <img src={stardull} alt='' />
+        </div>
         <p>{product.description}</p>
 
       <div className="single-product-offers">
         <div className="single-product-offers-list">
-          <div className="single-product-offers-list-item">
+          {/* <div className="single-product-offers-list-item">
             <h5>Bank Offer</h5>
             <p>Upto ₹1,000.00 discount on SBI Credit Cards</p>
           </div>
           <div className="single-product-offers-list-item">
             <h5>No Cost EMI</h5>
             <p>Upto ₹517.79 EMI interest savings on select Credit Cards</p>
-          </div>
-          <div className="single-product-offers-list-item">
+          </div> */}
+          {/* <div className="single-product-offers-list-item">
             <h5>Partner Offers</h5>
             <p>Get GST invoice and save up to 28% on business purchases.</p>
           </div>
           <div className="single-product-offers-list-item">
             <h5>Cashback</h5>
-            <p>
-              Get 5% back with Amazon Pay ICICI Bank credit card for Prime
-              members. 3% back for others
-            </p>
-          </div>
+            <p>Get 5% back with Amazon Pay ICICI Bank credit card for Prime
+              members. 3% back for others</p>
+          </div> */}
         </div>
       </div>
       </div>
