@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Cart.css";
 import { Link } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Cart() {
   const [cart, setCart] = useState(null);
 
@@ -28,7 +29,7 @@ export default function Cart() {
     if (newQuantity < 1) {
       console.error("Quantity cannot be less than 1");
       return;
-      
+
     }
   
     try {
@@ -69,6 +70,7 @@ export default function Cart() {
       console.log("Item removed successfully");
       const updatedCart = await response.json();
       setCart(updatedCart.cart);
+      toast.success("Item removed")
     } catch (error) {
       console.error("Error removing item:", error);
     }
@@ -117,7 +119,7 @@ export default function Cart() {
                 <td>₹{item.price}</td>
                 <td>
                 <button className="quantity-button"
-                   onClick={() => handleQuantityChange(item?.product_id._id, item.quantity - 1)}
+                   onClick={() => handleQuantityChange(item?._id, item.quantity - 1)}
                     disabled={item.quantity <= 1} >
                     -
                 </button>
@@ -126,7 +128,6 @@ export default function Cart() {
                     onClick={() => handleQuantityChange(item?.product_id._id, item.quantity + 1)}>
                     +
                 </button>
-
                 </td>
                 <td>₹{item.price * item.quantity}</td>
                 <td>

@@ -1,0 +1,25 @@
+.location-container {
+    display: grid;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 1rem;
+  }
+  
+  .location-text {
+    margin-right: 10px;
+  }
+  
+  .update-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .update-button:hover {
+    color: #1E90FF;
+    border: #ffffffbe 1px solid;
+    width: 80%;
+    cursor: pointer;
+  }

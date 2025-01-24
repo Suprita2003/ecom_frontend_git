@@ -1,0 +1,72 @@
+.app-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .open-sidebar-btn {
+    background-color: rgb(67, 65, 65);
+    color: white;
+    border: none;
+    /* padding: 10px 20px; */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.735); 
+    /* make background transparent */
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1000;
+  }
+  
+  .modal-sidebar {
+    background-color: white;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; 
+    position: fixed;
+    text-align: left;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .modal-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .modal-sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .modal-sidebar ul li  {
+    text-decoration: none;
+    color: #333333dc;
+    font-size: 18px;
+  }
+  
+  .modal-sidebar ul li a:hover {
+    color: #007bff;
+  }
+  

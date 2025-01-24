@@ -1,44 +1,62 @@
-.carousel {
+.carousel-container {
   position: relative;
+  height: 350px;
+  /* margin: 0 auto; */
+  overflow: hidden;
+}
+
+.carousel {
   width: 100%;
-  overflow: hidden; 
-  margin-top: 5%;
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  height: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
-.carousel-inner {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform; 
+.carousel img {
+  width: 100%;
+  height: 200%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
 }
 
-.carousel-item {
-  flex: 0 0 100%; 
-  text-align: center; 
+.sale-timer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  z-index: 10;
 }
 
-.carousel-item img {
-  width: 100%; 
-  height: auto; 
-}
-
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ccc;
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 6px;
+  font-size: 40px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  z-index: 10;
 }
 
-.dot.active {
-  background-color: #333; 
+.carousel-arrow:hover {
+  background-color: transparent;
+  border: #3333339c 1px solid;
+  border-radius: 10%;
 }
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
 

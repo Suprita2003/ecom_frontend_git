@@ -9,20 +9,11 @@ import Ordersummary from '../Ordersummary/Ordersummary';
 import Payment from '../Payment/Payment';
 import { useNavigate } from 'react-router-dom';
 // import { useLocation } from "react-router-dom";
-// import {toast, ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 const steps = ['Adress', 'Order Summary', 'Payment'];
 
 export default function HorizontalLinearAlternativeLabelStepper() {
-
-  // const location = useLocation();
-  // React.useEffect(() => {
-  //   if(location.state && location.state.toastMessage) {
-  //     toast.success(location.state.toastMessage)
-  //   }
-  // },[location.state]);
-
 
   const [activeStep, setActiveStep] = React.useState(0);
   const navigate = useNavigate();

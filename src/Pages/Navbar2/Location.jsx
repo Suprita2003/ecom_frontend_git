@@ -1,44 +1,29 @@
 import React, { useState } from "react";
+import './Location.css';
 
-export default function LocationTracker() {
-  const [location, setLocation] = useState({ latitude: null, longitude: null });
-  const [error, setError] = useState("");
-  const [showLocation, setShowLocation] = useState(false); 
+const LocationComponent = () => {
+  const [location, setLocation] = useState("Bengaluru");
+  const [zipcode, setZipcode] = useState("562130");
 
-  const fetchLocation = () => {
-    if (!navigator.geolocation) {
-      setError("Geolocation is not supported by your browser.");
-      return;
+  const updateLocation = () => {
+    const newLocation = prompt("Enter new location:");
+    const newZipcode = prompt("Enter new zipcode:");
+    if (newLocation && newZipcode) {
+      setLocation(newLocation);
+      setZipcode(newZipcode);
     }
-
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        setLocation({ latitude, longitude });
-        setShowLocation(true); 
-        setError(""); 
-      },
-      (err) => {
-        console.error("Error fetching location:", err.message);
-        setError("Unable to fetch location. Please allow location access.");
-      }
-    );
   };
 
   return (
-    <div style={{ padding: "5px" }}>
-      <button onClick={fetchLocation} style={{ marginRight: "5px" }}>
-        Get My Location
+    <div className="location-container">
+      <span className="location-text">
+        Delivering to {location} {zipcode}
+      </span>
+      <button className="update-button" onClick={updateLocation}>
+        Update location
       </button>
-
-      {showLocation && (
-        <div style={{ display: "flex",flexDirection:"column",gap:"5px", marginLeft: "5px" }}>
-          <p>Latitude: {location.latitude}</p>
-          <p>Longitude: {location.longitude}</p>
-        </div>
-      )}
-
-      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
-}
+};
+
+export default LocationComponent;

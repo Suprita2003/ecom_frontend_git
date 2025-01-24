@@ -5,6 +5,7 @@ import Dashboard from './Dashboard'
 import Cart from './Pages/Cart/Cart'
 import Navbar from './Main/Navbar/Navbar'
 import Orders from './Pages/Orders/Orders'
+import SingleProduct from './Pages/Singleproduct/Singleproduct'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/order' element={<Orders/>}/>
+          <Route path="/product/:productId" element={<SingleProduct/>} />
       </Routes>
     </BrowserRouter>
   )
