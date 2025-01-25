@@ -34,10 +34,20 @@ export default function Products() {
       if (!response.ok) throw new Error("Failed to add item to cart");
       const data = await response.json();
       console.log("Item added successfully:", data);
-      toast.success("Item added to cart"); 
+      toast.success("Item added to cart",toastOptions); 
     } catch (error) {
       console.error("Error adding item to cart:", error);
     }
+  };
+  const toastOptions = {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme:"dark"
   };
 
   return (
@@ -51,21 +61,18 @@ export default function Products() {
             <div className="productdetails">
               <div className="productcardleft">
                 <h2>{product.name.toUpperCase()}</h2>
-                <h3>₹{product.price}</h3>
+                <h3>₹ {product.price}</h3>
               </div>
               <div className="productcardright">
                 <button
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent card click
-                    addToCart("6789ffe83f4cf088e9cc8743", "677faab42ae0ccd71481090e", {
-                      _id: product._id,
-                      quantity: 1,
+                    addToCart("6789ffe83f4cf088e9cc8743", "677faab42ae0ccd71481090e", {_id: product._id,quantity: 1,
                     });
                   }}
                 >
                   Add to Cart
                 </button>
-                <ToastContainer/>
               </div>
             </div>
           </div>
@@ -73,6 +80,7 @@ export default function Products() {
       ) : (
         <LoadingPage />
       )}
+      <ToastContainer/>
     </div>
   );
 }

@@ -26,7 +26,7 @@ export default function Searchbar() {
             fontSize: '24px',
             cursor: 'pointer',
             bottom: '5px',
-            left: '98.2%',
+            left: '100%',
             position: 'relative',
             zIndex: '2',
             padding: '6px',

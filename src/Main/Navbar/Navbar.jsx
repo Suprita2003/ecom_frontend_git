@@ -4,17 +4,17 @@ import hs from '../../Assets/hs.png'
 import { SignInButton, UserButton, useUser } from '@clerk/clerk-react'
 import Searchbar from './Searchbar'
 import cart from '../../Assets/cart.png'
-import { GoSearch } from "react-icons/go";
+// import { GoSearch } from "react-icons/go";
 
 export default function Navbar() {
     const {isSignedIn} = useUser();
 
 
-    const getCartCount = () => {
-      if (!cart || !cart.products) return 0; 
+    // const getCartCount = () => {
+    //   if (!cart || !cart.products) return 0; 
     
-      return cart.products.reduce((item) => item + item.quantity);
-    };
+    //   return cart.products.reduce((item) => item + item.quantity);
+    // };
 
   return (
     <div className='navbar'>
@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="navright">   
           <div className="carticon">
             <a href='/cart'> <img src={cart} alt="" width='30px' height='30px'/> </a>
-            <div className='navcartcount'>{getCartCount()}</div>
+            {/* <div className='navcartcount'>{getCartCount()}</div> */}
           </div>
           <div className='user'>
             {isSignedIn ? (

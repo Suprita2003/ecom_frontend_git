@@ -9,8 +9,8 @@ import Ordersummary from '../Ordersummary/Ordersummary';
 import Payment from '../Payment/Payment';
 import { useNavigate } from 'react-router-dom';
 // import { useLocation } from "react-router-dom";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const steps = ['Adress', 'Order Summary', 'Payment'];
 
 export default function HorizontalLinearAlternativeLabelStepper() {
